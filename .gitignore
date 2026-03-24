@@ -1,0 +1,41 @@
+## Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.venv/
+.env
+secrets.yaml
+*.secrets.yaml
+
+## OS / IDE
+.DS_Store
+.vscode/
+
+## Jupyter test notebooks
+*_test.ipynb
+
+## Old backups
+OLD_*
+*OLD*
+
+## Logs
+logs/
+logs_1/
+*.log
+
+## Airflow cache
+airflow/dags/__pycache__/
+
+# ## Data 
+# app/data/
+# data/
+
+## Temporary model / forecast artifacts
+era_tmp_files/
+gfs_tmp_files/
+
+## netcdf outputs
+*.nc
+
