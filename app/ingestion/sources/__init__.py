@@ -1,4 +1,4 @@
-from .gefs import GEFSSource
+from .gefs_source import GEFSSource
 
 
 source_map = {

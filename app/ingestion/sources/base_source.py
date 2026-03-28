@@ -11,6 +11,7 @@ import pandas as pd
 @dataclass
 class SourceFile:
     url: str
+    index_url: str
     source: str
     path: str
     run_date: date
@@ -148,14 +149,13 @@ class BaseSource(ABC):
 
     def get_source_file(self, source: str, **kwargs) -> SourceFile:
         """
-        Выбирает лучший источник и возвращает SourceFile.
         Используется лоадером как точка входа.
         """
-        # source = self.select_source(**kwargs) if source is None else source
         path = self.build_path(**kwargs)
         url = f"{self.SOURCES[source]}/{path}"
         return SourceFile(
             url=url,
+            index_url=self._idx_url(url),
             source=source,
             path=path,
             run_date=kwargs.get("run_date"),

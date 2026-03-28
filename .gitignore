@@ -16,6 +16,9 @@ secrets.yaml
 ## Jupyter test notebooks
 *_test.ipynb
 
+## PY test scripts
+*_test.py
+
 ## Old backups
 OLD_*
 *OLD*

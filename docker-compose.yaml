@@ -1,0 +1,9 @@
+services:
+
+  app:
+    build: .
+    container_name: weather_risk_agent
+    # env_file: .env
+    volumes:
+      - .:/app
+    restart: unless-stopped
